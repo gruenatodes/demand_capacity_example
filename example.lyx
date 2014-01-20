@@ -291,5 +291,57 @@ R-\left(1-\delta\right)=\int_{0}^{\frac{zk\bar{c}^{1-\alpha}p^{\sigma}}{P^{\sigm
 
 \end_layout
 
+\begin_layout Standard
+With the realization of the demand shock marginal cost of production are
+ determined by wage and labor productivity.
+ In particular, in order to produce one additional (marginal) unit of output,
+ a firm needs to hire 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial l\left(y;k,z\right)}{\partial y} & = & \frac{1}{\beta}y^{\frac{1-\beta}{\beta}}\left(zk^{\alpha}\right)^{-1/\beta}\\
+ & = & \frac{1}{\beta}\left(\frac{y^{1-\beta}}{zk^{\alpha}}\right)^{1/\beta}\\
+ & = & \frac{1}{\beta}\left(\frac{\left(zk^{\alpha}l^{\beta}\right)^{1-\beta}}{zk^{\alpha}}\right)^{1/\beta}\\
+ & = & \frac{1}{\beta}\frac{l^{1-\beta}}{zk^{\alpha}}
+\end{eqnarray*}
+
+\end_inset
+
+so that marginal cost are just 
+\begin_inset Formula $\text{MC}=w\beta^{-1}z^{-1}k^{-\alpha}l^{1-\beta}$
+\end_inset
+
+ or if 
+\begin_inset Formula $\beta=1-\alpha$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{MC} & = & \frac{w}{1-\alpha}\frac{l^{\alpha}}{zk^{\alpha}}\\
+ & = & \frac{1}{z}\frac{w}{1-\alpha}\left(\frac{l}{k}\right)^{\alpha}.
+\end{eqnarray*}
+
+\end_inset
+
+Analogously, average cost per unit produced is given by 
+\begin_inset Formula $\left[\left(R-1+\delta\right)k+wl\right]/\left(zk^{\alpha}l^{\beta}\right)$
+\end_inset
+
+ and in case that 
+\begin_inset Formula $\beta=1-\alpha$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{AC} & = & \frac{\left[R-1+\delta\right]k}{zk^{\alpha}l^{1-\alpha}}+\frac{wl}{zk^{\alpha}l^{1-\alpha}}\\
+ & = & \frac{1}{z}\left[\left(R-1+\delta\right)\left(\frac{l}{k}\right)^{\alpha-1}+w\left(\frac{l}{k}\right)^{\alpha}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
