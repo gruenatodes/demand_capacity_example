@@ -66,6 +66,8 @@ vec2 = linspace(p.cbar, 2*p.cbar, 201); vec2(1:2) = [];
 figure, hold on
 plot(l_k_vec, arrayfun(AC_fun, l_k_vec), vec2, arrayfun(AC_fun, vec2))
 line([p.cbar p.cbar],[0.7 0.9])
+dots = l_k_ratio(10000:10000:end); ACdots = AC(10000:10000:end);
+scatter(dots(ACdots<2), ACdots(ACdots<2),3)
 
 % aggregate production:
 b_weights = b_draws ./ sum(b_draws);
@@ -75,7 +77,7 @@ agg_output = (sum( (rd_prod(:).^ p.sigexp) .* b_weights )) ^ (1/p.sigexp);
 res.k_opt = k_opt;
 res.pr_opt = pr_opt;
 res.bbar = bbar;
-res.share_constrained = Fbbar;
+res.share_unconstrained = Fbbar;
 res.output = agg_output;
 res.prod = prod_field;
 res.labor = labor_field;

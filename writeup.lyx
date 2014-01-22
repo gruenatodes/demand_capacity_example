@@ -1,0 +1,260 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+The basic idea is that in most states of the world there is more macroeconomic
+ downside risk than upside risk.
+ Here we try to formalize this by combining demand shocks with a capacity
+ constraint on firm production.
+ The corresponding mechanism is that it is easy to reduce production following
+ a (large enough) negative shock, but difficult to expand production in
+ response to a (large enough) positive shock.
+ 
+\end_layout
+
+\begin_layout Standard
+There are two main observations motivating the idea of an asymmetric relation
+ between positive and negative shocks.
+ On one hand, on the level of first moments, the sharpest changes in aggregate
+ production are predominantly negative.
+ This implies that if one assumes underlying symmetric shocks, they translate
+ differently into upswings and downturns, at least if large enough in absolute
+ value.
+ On the other hand, on the level of second moments, a variety of cross-sectional
+ dispersion measures increase during recessions (XXX: add sources)
+\end_layout
+
+\begin_layout Standard
+The basic assumption is that the firm chooses its capacity before knowing
+ its demand.
+ Choice of capacity implies a certain level beyond which it becomes difficult
+ to further increase production.
+ In order to give room for demand shocks some form of price rigidity is
+ needed.
+ In the example below we make these assumptions extreme by imposing that
+ the firm chooses capital stock and price one period ahead, and by introducing
+ the capacity constraint as an upper limit on how much labor the firm can
+ productively employ per unit of capital.
+ (XXX: public data on capital utilization available by sector -> could check
+ for asymmetry)
+\end_layout
+
+\begin_layout Paragraph
+Numerical example
+\end_layout
+
+\begin_layout Standard
+\begin_inset Phantom HPhantom
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Production function: 
+\begin_inset Formula $y\left(k,l;z\right)=zk^{\alpha}l^{1-\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Demand function: 
+\begin_inset Formula $q^{d}\left(b_{i},p\right)=b_{i}P^{\sigma-1}Y/p^{\sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Firm-specific demand shock 
+\begin_inset Formula $b_{i}\sim\log N$
+\end_inset
+
+ with 
+\begin_inset Formula $E\left[b_{i}\right]=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Capacity constraint: 
+\begin_inset Formula $l\leq\bar{c}k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Period 
+\begin_inset Formula $0$
+\end_inset
+
+ -- Buy capital 
+\begin_inset Formula $k$
+\end_inset
+
+, announce goods price 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Firm chooses 
+\begin_inset Formula $\left(k,p\right)$
+\end_inset
+
+ optimally.
+\end_layout
+
+\begin_layout Itemize
+Period 
+\begin_inset Formula $1$
+\end_inset
+
+ -- Demand shock 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ is realized.
+ Firm hires labor in a way that it produces and sells 
+\begin_inset Formula $\min\left\{ q^{d}\left(b_{i},p\right),y\left(k,\bar{c}k;z\right)\right\} $
+\end_inset
+
+.
+ Finally it sells undepreciated capital.
+ Firm doesn't maximize anything in this period.
+\end_layout
+
+\begin_layout Itemize
+Firm's objective function in period 
+\begin_inset Formula $0$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{multline*}
+E\left[\pi\left(k,p\right)\right]=\left[\left(1-\delta\right)-R\right]k+\int_{0}^{\bar{b}}\left[pq^{d}\left(b_{i},p\right)-wl\left(q^{d}\left(b_{i},p\right);z,k\right)\right]dF\left(b_{i}\right)+\\
++\left[1-F\left(\bar{b}\right)\right]\left[p\bar{y}\left(z,k\right)-wl\left(\bar{y}\left(z,k\right);z,k\right)\right]
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Simulate a partial equilibrium outcome by drawing random 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+'s for a number of firms (holding aggregate variables 
+\begin_inset Formula $R,w,P,Y$
+\end_inset
+
+ constant).
+ Have `aggregate shock' by drawing from a distribution with
+\begin_inset Formula $E\left[b_{i}\right]\gtrless1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Asymmetry of first moments 
+\end_layout
+
+\begin_layout Itemize
+Asymmetry of second moments 
+\end_layout
+
+\begin_layout Itemize
+how they relate (aggregate TFP) (see also Blooms recent paper)
+\end_layout
+
+\begin_layout Itemize
+implications for labor?
+\end_layout
+
+\begin_layout Itemize
+implications for capital?
+\end_layout
+
+\begin_layout Itemize
+implications for large shocks if majority of firms sits inside capacity
+ bounds and can get pushed against constrained only with large enough shock?
+\end_layout
+
+\end_body
+\end_document
