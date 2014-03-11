@@ -24,7 +24,7 @@ b_draws = lognrnd(mu_with_shock, p.sig_b, [1000000, 1]);
 [rd_prof, rd_labor, rd_prod] = ...
     realized_profit(b_draws,z,k_opt,pr_opt,p);
 l_k_ratio = rd_labor ./ k_opt;
-% note that the l/k-ratio at the cap is just p.cbar, by definition.
+% note that the l/k-ratio at the cap is just cbar, by definition.
 
 % share of firms at capacity constraint
 [~, Fbbar, bbar] = exp_profits(z,mu_with_shock,k_opt,pr_opt,p);
@@ -37,20 +37,21 @@ prod_field = get_stats(rd_prod, rd_prod, b_draws);
 prod_field.cap = cap_prod;
 % labor:
 labor_field = get_stats(rd_labor, rd_prod, b_draws);
-labor_field.cap = p.cbar * k_opt;
+cbar = ( ( ( 1 - p.alpha ) * pr_opt * z ) / p.w ) .^ (1 / p.alpha);
+labor_field.cap = cbar * k_opt;
 % profits:
 profit_field = get_stats(rd_prof, rd_prod, b_draws);
 profit_field.cap = cap_profit;
 % l/k ratio
 l_k_field = get_stats(rd_prof, rd_prod, b_draws);
-l_k_field.cap = p.cbar;
+l_k_field.cap = cbar;
 % Marginal costs under quasi-fixed capital (and constant z) are determined 
 % only by labor input, which in turn, given prices, depends only on the 
 % demand shock
 MC_fun = @(l_k) 1/z * p.w / (1 - p.alpha) * l_k .^ (p.alpha);
 MC = MC_fun(l_k_ratio);
 MC_field = get_stats(MC, rd_prod, b_draws);
-MC_field.cap = MC_fun(p.cbar);
+MC_field.cap = MC_fun(cbar);
 % Average costs, including costs of capital.
 % This measures the extent of misallocation that is due to quasi-fixed
 % capital (-> suboptimal input factor ratio for a given level of
@@ -59,13 +60,13 @@ AC_fun = @(l_k) 1/z * ( (p.R - 1 + p.delta) * l_k .^ (p.alpha - 1) + ...
             p.w * l_k .^ (p.alpha) );
 AC = AC_fun(l_k_ratio);
 AC_field = get_stats(AC, rd_prod, b_draws);
-AC_field.cap = AC_fun(p.cbar);
+AC_field.cap = AC_fun(cbar);
 
-l_k_vec = linspace(0,p.cbar, 101); l_k_vec(1:4) = [];
-vec2 = linspace(p.cbar, 2*p.cbar, 201); vec2(1:2) = [];
+l_k_vec = linspace(0,cbar, 101); l_k_vec(1:4) = [];
+vec2 = linspace(cbar, 2*cbar, 201); vec2(1:2) = [];
 figure, hold on
 plot(l_k_vec, arrayfun(AC_fun, l_k_vec), vec2, arrayfun(AC_fun, vec2))
-line([p.cbar p.cbar],[0.7 0.9])
+line([cbar cbar],[0.7 0.9])
 dots = l_k_ratio(10000:10000:end); ACdots = AC(10000:10000:end);
 scatter(dots(ACdots<2), ACdots(ACdots<2),3)
 

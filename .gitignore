@@ -217,5 +217,7 @@ pip-log.txt
 #### MATLAB
 .asv
 .m
+.png
+.fig
 
 #### LyX

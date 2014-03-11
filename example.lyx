@@ -214,8 +214,8 @@ and
  Similarly, 
 \begin_inset Formula 
 \begin{eqnarray*}
-\int_{0}^{\bar{b}}b_{i}^{\frac{1}{\beta}}dF\left(b_{i}\right) & = & \int_{0}^{\bar{b}}cdF\left(c\right)\\
- & = & \frac{e^{\mu/\beta+\sigma^{2}/\left(2\beta^{2}\right)}}{2}\left[1-\text{erf}\left(\frac{\sigma^{2}/\beta+\mu-\beta\ln\bar{b}}{\sqrt{2}\sigma}\right)\right]
+\int_{0}^{\bar{b}}b_{i}^{\frac{1}{\beta}}dF\left(b_{i}\right) & = & \int_{0}^{\bar{\tilde{b}}}cdF\left(c\right)\\
+ & = & \frac{e^{\mu/\beta+\sigma^{2}/\left(2\beta^{2}\right)}}{2}\left[1-\text{erf}\left(\frac{\sigma^{2}/\beta+\mu-\beta\ln\bar{\tilde{b}}}{\sqrt{2}\sigma}\right)\right]
 \end{eqnarray*}
 
 \end_inset
@@ -341,6 +341,42 @@ Analogously, average cost per unit produced is given by
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+What is aggregate production 
+\begin_inset Formula $Y$
+\end_inset
+
+? Firm production is given by 
+\begin_inset Formula $y^{i}\left(b_{i}\right)=\max\left\{ q^{d}\left(b_{i},p_{i}\right),\bar{y}\left(z,k\right)\right\} $
+\end_inset
+
+ so that 
+\begin_inset Formula 
+\begin{eqnarray*}
+Y & = & \int_{0}^{\infty}y^{i}\left(b_{i}\right)df\left(b_{i}\right)\\
+ & = & \int_{0}^{\bar{b}}q^{d}\left(b_{i},p_{i}\right)df\left(b_{i}\right)+\left[1-F\left(\bar{b}\right)\right]\bar{y}\\
+ & = & \int_{0}^{\bar{b}}b_{i}\frac{P^{\sigma-1}Y}{p_{i}^{\sigma}}df\left(b_{i}\right)+\left[1-F\left(\bar{b}\right)\right]\bar{y}\\
+ & = & \int_{0}^{\bar{b}}b_{i}df\left(b_{i}\right)\frac{P^{\sigma-1}Y}{p_{i}^{\sigma}}+\left[1-F\left(\bar{b}\right)\right]\bar{y}
+\end{eqnarray*}
+
+\end_inset
+
+which again we can express in closed form using the expression for the lognormal
+ partial expectation 
+\begin_inset Formula $\int_{0}^{\bar{b}}b_{i}df\left(b_{i}\right)$
+\end_inset
+
+.
+ As stated the above is only valid, however, for firmss choosing identical
+ 
+\begin_inset Formula $\left(p_{i},k_{i}\right)$
+\end_inset
+
+.
+ In case of firm heterogeneity we need to integrate over the initial state
+ as well.
 \end_layout
 
 \end_body

@@ -6,7 +6,9 @@ if k <= 0 || pr <= 0
     return
 end
 
-bbar = z .* k .* p.cbar ^ (1 - p.alpha) .* pr .^ p.sigma / p.PY;
+cbar = ( ( ( 1 - p.alpha ) * pr * z ) / p.w ) .^ (1 / p.alpha);
+
+bbar = z .* k .* cbar .^ (1 - p.alpha) .* pr .^ p.sigma / p.PY;
 
 [F_bbar, ~, c_e] = cond_exp(bbar, mu_b, p.sig_b);
 c_e = c_e * F_bbar;
@@ -22,7 +24,7 @@ profit = ((1 - p.delta) - p.R) * k + ...
     p.PY / pr .^ (p.sigma - 1) * c_e - ...
     (p.PY / (pr .^ p.sigma .* z .* k .^ p.alpha)) .^ (1 / (1-p.alpha)) .* ...
         p.w .* c_e_exp + ...
-    (1 - F_bbar) * (pr .* z .* k .* p.cbar ^ (1 - p.alpha) - p.w * p.cbar * k );
+    (1 - F_bbar) * (pr .* z .* k .* cbar ^ (1 - p.alpha) - p.w * cbar * k );
 
 end
 

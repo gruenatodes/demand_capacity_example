@@ -6,13 +6,15 @@ if any(k <= 0) || any(pr <= 0)
     error('k and pr must be strictly positive')
 end
 
-bbar = z .* k .* p.cbar ^ (1 - p.alpha) .* pr .^ p.sigma / p.PY;
+cbar = ( ( ( 1 - p.alpha ) * pr * z ) / p.w ) .^ (1 / p.alpha);
+
+bbar = z .* k .* cbar ^ (1 - p.alpha) .* pr .^ p.sigma / p.PY;
 unconstr = b < bbar;
 
-profit = zeros(size(b)) + pr * z * k * p.cbar ^ (1 - p.alpha) - ...
-    p.w * k * p.cbar; % this is the constrained default (does not depend on b)
-labor = zeros(size(b)) + k * p.cbar; % labor in constrained case
-prod = zeros(size(b)) + z * k * p.cbar;
+profit = zeros(size(b)) + pr * z * k * cbar ^ (1 - p.alpha) - ...
+    p.w * k * cbar; % this is the constrained default (does not depend on b)
+labor = zeros(size(b)) + k * cbar; % labor in constrained case
+prod = zeros(size(b)) + z * k * cbar;
 
 labor(unconstr) = (b(unconstr) * p.PY ./ ...
     (pr .^ p.sigma .* z .* k .^ p.alpha)) .^ (1 / (1-p.alpha));
