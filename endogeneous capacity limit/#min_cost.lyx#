@@ -558,13 +558,13 @@ py^{s}-C_{c}\left(y^{s}\right) & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
 \end{cases}\\
  & = & \begin{cases}
 b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{2}{2-\alpha}}w^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma-1}Ip^{-\sigma}}{z}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right] & \mbox{if }b_{i}\leq\hat{\bar{b}}\\
-b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{1}{1-\alpha}}k^{-\frac{\alpha}{1-\alpha}}-\chi & \mbox{if }\hat{\bar{b}}<b_{i}\leq\bar{b}_{\mbox{case2}}\\
-\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}-\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1}{\alpha}}-\chi & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
+b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{1}{1-\alpha}}k^{-\frac{\alpha}{1-\alpha}}-\chi k & \mbox{if }\hat{\bar{b}}<b_{i}\leq\bar{b}_{\mbox{case2}}\\
+\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}-\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1}{\alpha}}-\chi k & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
 \end{cases}\\
  & = & \begin{cases}
 b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{2}{2-\alpha}}w^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma-1}Ip^{-\sigma}}{z}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right] & \mbox{if }b_{i}\leq\hat{\bar{b}}\\
-b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{1}{1-\alpha}}k^{-\frac{\alpha}{1-\alpha}}-\chi & \mbox{if }\hat{\bar{b}}<b_{i}\leq\bar{b}_{\mbox{case2}}\\
-\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}\alpha-\chi & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
+b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{1}{1-\alpha}}k^{-\frac{\alpha}{1-\alpha}}-\chi k & \mbox{if }\hat{\bar{b}}<b_{i}\leq\bar{b}_{\mbox{case2}}\\
+\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}\alpha-\chi k & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
 \end{cases}
 \end{eqnarray*}
 
@@ -618,7 +618,7 @@ We're finally ready to write down expected profits as a function of
 \begin_inset Formula $\tilde{k}=k$
 \end_inset
 
-.
+ at quantity supplied.
  In the former case 1 expected profits are
 \begin_inset Formula 
 \begin{multline*}
@@ -635,7 +635,7 @@ and in the latter case 2 they are
 E\left[\pi\right]=P^{\sigma-1}Ip^{1-\sigma}\int_{0}^{\hat{\bar{b}}}b_{i}df\left(b_{i}\right)\\
 -w^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]\int_{0}^{\hat{\bar{b}}}b_{i}^{\frac{2}{2-\alpha}}df\left(b_{i}\right)\\
 +P^{\sigma-1}Ip^{1-\sigma}\int_{\hat{\bar{b}}}^{\bar{b}_{\textrm{case2}}}b_{i}df\left(b_{i}\right)-w\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{1}{1-\alpha}}k^{-\frac{\alpha}{1-\alpha}}\int_{\hat{\bar{b}}}^{\bar{b}_{\textrm{case2}}}b_{i}^{\frac{1}{1-\alpha}}df\left(b_{i}\right)\\
-+\left[1-F\left(\bar{b}_{\textrm{case2}}\right)\right]\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}\alpha-\left[1-F\left(\hat{\bar{b}}\right)\right]\chi.
++\left[1-F\left(\bar{b}_{\textrm{case2}}\right)\right]\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}\alpha-\left[1-F\left(\hat{\bar{b}}\right)\right]\chi k.
 \end{multline*}
 
 \end_inset

@@ -215,9 +215,8 @@ pip-log.txt
 .mr.developer.cfg
 
 #### MATLAB
-.asv
-.m
-.png
-.fig
+*.asv
+*.mat
+*.png
+*.fig
 
-#### LyX
