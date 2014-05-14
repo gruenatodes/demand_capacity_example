@@ -7,12 +7,12 @@ z = 1;
 % discretize state space for demand shock:
 [b, pi.b] = TAUCHEN(pp.Nb, p.rho_b, p.sigma_b, pp.tauchen_param_b);
 b = b';
-% b = exp(b);
-lr_dist_b = (zeros(1, pp.Nb) + 1 / pp.Nb) * (pi.b ^ 50);
+lr_dist_b = (zeros(1, pp.Nb) + 1 / pp.Nb) * (pi.b ^ 50); % long-run 
+% distribution of idiosyncratic demand shocks
 
 % initial guesses for aggregate variables
-agg.Y = 2;
-agg.w = 2/3; %* agg.Y;
+agg.Y = 0.5;
+agg.w = 2/3 * agg.Y;
 agg.R = 1.04;
 agg.P = 1;
 
@@ -20,8 +20,8 @@ pol_k = zeros(1, pp.Nb);
 pol_pr = zeros(1, pp.Nb);
 
 tol = 1; count = 0;
-while tol > 0.01 && count < 150
-    % derive policy functions for each of the states
+while tol > 0.001 % && count < 150
+    %%% derive policy functions for each of the states
     for ib = 1:pp.Nb
         exp_demand = p.rho_b * b(ib);
         [pol_opt, exp_profit] = ...
@@ -31,7 +31,7 @@ while tol > 0.01 && count < 150
         exp_profit = -exp_profit; 
     end
     
-    % find aggregate production.
+    %%% find aggregate production.
     outer_integral = 0;
     for ib = 1:pp.Nb
         exp_demand = p.rho_b * b(ib);
@@ -93,9 +93,18 @@ while tol > 0.01 && count < 150
     end
     aggregate_prod = outer_integral ^ (p.sigma / (p.sigma - 1));
     
-break    
+    %%% loop control
+    tol = abs(agg.Y - aggregate_prod);
+    agg.Y = 2/3 * agg.Y + 1/3 * aggregate_prod;
+    agg.w = 2/3 * agg.Y;
+    count = count + 1;
 end
 
 agg.Y
 aggregate_prod
-[pol_k; pol_pr; exp(b) ./ pol_k]
+[pol_k; pol_pr; exp(p.rho_b * b) ./ pol_k]
+
+% put consistency test for aggregate price index
+
+
+

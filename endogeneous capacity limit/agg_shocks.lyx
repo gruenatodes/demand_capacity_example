@@ -1,0 +1,522 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+Households
+\end_layout
+
+\begin_layout Standard
+The representative household works, consumes, and saves.
+ It has a utility function over consumption 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+ and labor hours 
+\begin_inset Formula $n_{t}$
+\end_inset
+
+ given by 
+\begin_inset Formula 
+\[
+U\left(\left\{ c_{t}\right\} ,\left\{ n_{t}\right\} \right)=E\left[\sum_{t}\beta^{t}\phi_{t}\left(\frac{c_{t}^{1-\tau}}{1-\tau}-\varphi_{t}v\left(n_{t}\right)\right)\right]
+\]
+
+\end_inset
+
+subject to a budget constraint of 
+\begin_inset Formula $c_{t}+a_{t+1}=R_{t}a_{t}+w_{t}n_{t}$
+\end_inset
+
+.
+ FOCs are, conditional on information in 
+\begin_inset Formula $t$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ \begin{aligned}\beta^{t}\phi_{t}c_{t}^{-\tau} & =\lambda_{t}\\
+\beta^{t+1}R_{t+1}E\left[\lambda_{t+1}\right] & =\lambda_{t}\\
+\beta^{t}\phi_{t}\varphi_{t}v'\left(n_{t}\right) & =w\lambda_{t}
+\end{aligned}
+\right.\\
+\left\{ \begin{aligned}\frac{\phi_{t}c_{t}^{-\tau}}{E\left[\phi_{t+1}c_{t+1}^{-\tau}\right]} & =\beta R_{t+1}\\
+\frac{v'\left(n_{t}\right)}{c_{t}^{-\tau}} & =\frac{w}{\varphi_{t}}.
+\end{aligned}
+\right.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Final goods
+\end_layout
+
+\begin_layout Standard
+The representative final goods sector functions as a CES aggregator of intermedi
+ate goods.
+ In every period it buys a basket 
+\begin_inset Formula $\left\{ y_{it}\right\} _{i}$
+\end_inset
+
+ of those goods and uses them to produce a final good 
+\begin_inset Formula $Y_{t}$
+\end_inset
+
+ that can be used for consumption and investment.
+ The production function is
+\begin_inset Formula 
+\[
+Y_{t}=A_{t}\left[\int b_{it}^{\frac{1}{\sigma}}y_{it}{}^{\frac{\sigma-1}{\sigma}}di\right]^{\frac{\sigma}{\sigma-1}}.
+\]
+
+\end_inset
+
+Since it is linearly homogenous in the bundle of input goods, no interior
+ optimal level of production exists given prices.
+ The optimal input basket however can be determined by holding input costs
+ constant, i.e.
+ solving the problem (time indices oppressed) 
+\begin_inset Formula 
+\[
+\max_{\left\{ y_{i}\right\} }A\left[\int b_{i}^{\frac{1}{\sigma}}y_{i}{}^{\frac{\sigma-1}{\sigma}}di\right]^{\frac{\sigma}{\sigma-1}}+\lambda\left[I-\int p_{i}y_{i}di\right]
+\]
+
+\end_inset
+
+such that a typical FOC is
+\begin_inset Formula 
+\[
+A\left[\int b_{i}^{\frac{1}{\sigma}}y_{i}{}^{\frac{\sigma-1}{\sigma}}di\right]^{\frac{1}{\sigma-1}}\left(\frac{b_{i}}{y_{i}}\right)^{\frac{1}{\sigma}}=\lambda p_{i}
+\]
+
+\end_inset
+
+and for any two goods 
+\begin_inset Formula $i,j$
+\end_inset
+
+ one has 
+\begin_inset Formula 
+\[
+y_{i}=y_{j}\frac{b_{i}}{b_{j}}\left(\frac{p_{j}}{p_{i}}\right)^{\sigma}
+\]
+
+\end_inset
+
+which, multiplied by 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ and integrated over 
+\begin_inset Formula $i$
+\end_inset
+
+ gives
+\begin_inset Formula 
+\[
+I=\int p_{i}y_{i}di=\frac{y_{j}}{b_{j}}p_{j}^{\sigma}\int b_{i}p_{i}^{1-\sigma}di
+\]
+
+\end_inset
+
+so that 
+\begin_inset Formula $y_{j}=b_{j}IP^{\sigma-1}/p_{j}^{\sigma}$
+\end_inset
+
+ where 
+\begin_inset Formula $P^{1-\sigma}\equiv\left[\int b_{j}p_{j}^{1-\sigma}di\right]$
+\end_inset
+
+ .
+ What is the relationship between 
+\begin_inset Formula $I$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+? Plugging back into the production function yields
+\begin_inset Formula 
+\begin{eqnarray*}
+Y & = & A\left[\int b_{i}^{\frac{1}{\sigma}}\left(\frac{b_{i}IP^{\sigma-1}}{p_{i}^{\sigma}}\right)^{\frac{\sigma-1}{\sigma}}di\right]^{\frac{\sigma}{\sigma-1}}\\
+ & = & AIP^{\sigma-1}\left[\int b_{i}p_{i}^{1-\sigma}di\right]^{\frac{\sigma}{\sigma-1}}\\
+ & = & AIP^{\sigma-1}\left[P^{1-\sigma}\right]^{\frac{\sigma}{\sigma-1}}\\
+ & = & \frac{AI}{P}
+\end{eqnarray*}
+
+\end_inset
+
+such that with 
+\begin_inset Formula $I=PY/A$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i}^{d} & = & \frac{b_{i}YP^{\sigma}}{Ap_{i}^{\sigma}}\\
+ & = & b_{i}\frac{Y}{A}\left(\frac{P}{p_{i}}\right)^{\sigma}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Intermediate goods
+\end_layout
+
+\begin_layout Paragraph*
+Technology
+\end_layout
+
+\begin_layout Standard
+The intermediate goods firm has the production function 
+\begin_inset Formula 
+\[
+y_{it}=z_{it}\tilde{k}_{it}^{\alpha}l_{it}^{1-\alpha}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\tilde{k_{it}}\leq k_{it}$
+\end_inset
+
+ is utilized capital and 
+\begin_inset Formula $k_{it}$
+\end_inset
+
+ can be considered maximum capacity.
+ Capital follows the transition equation 
+\begin_inset Formula $k_{i,t+1}=\left(1-\delta\right)k_{it}+i_{it}$
+\end_inset
+
+ with 
+\begin_inset Formula $i_{it}$
+\end_inset
+
+ representing investment.
+ The firm sets its price 
+\begin_inset Formula $p_{it}$
+\end_inset
+
+ one period in advance.
+ Under a quadratic cost function of capital utilization 
+\begin_inset Formula $c\left(\tilde{k},k\right)=\chi\left(\tilde{k}/k\right)^{2}k$
+\end_inset
+
+ and given prices the firm's flow revenue is 
+\begin_inset Formula 
+\[
+p_{it}y_{it}-w_{t}l_{it}-c\left(\tilde{k},k\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Supply
+\end_layout
+
+\begin_layout Standard
+From 
+\begin_inset Quotes eld
+\end_inset
+
+min_cost.lyx
+\begin_inset Quotes erd
+\end_inset
+
+ we know that firm supply given 
+\begin_inset Formula $\left(k_{it},p_{it}\right)$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{it}^{s} & = & \begin{cases}
+p_{it}^{\frac{2-\alpha}{\alpha}}w_{t}^{-\frac{2-2\alpha}{\alpha}}z_{it}^{\frac{2}{\alpha}}\frac{k_{it}}{\chi}\left(\frac{2-\alpha}{2}\right)^{\frac{2-\alpha}{\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{2-\alpha}{\alpha}} & \mbox{if }p_{it}z_{it}\leq\frac{w_{t}^{1-\alpha}\left(2\chi\right)^{\alpha}}{\alpha^{\alpha}\left(1-\alpha\right)^{1-\alpha}}\\
+\left[\frac{p_{it}}{w_{t}}\left(1-\alpha\right)\right]^{\frac{1-\alpha}{\alpha}}z_{it}^{\frac{1}{\alpha}}k_{it} & \mbox{otherwise.}
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Realized revenues
+\end_layout
+
+\begin_layout Standard
+In the former case the condition 
+\begin_inset Formula $y_{i}^{d}\leq y_{i}^{s}$
+\end_inset
+
+ implies
+\begin_inset Formula 
+\begin{eqnarray*}
+b_{i}\frac{Y}{A}\left(\frac{P}{p_{i}}\right)^{\sigma} & \leq & p_{i}^{\frac{2-\alpha}{\alpha}}w^{-\frac{2-2\alpha}{\alpha}}z_{i}^{\frac{2}{\alpha}}\frac{k_{i}}{\chi}\left(\frac{2-\alpha}{2}\right)^{\frac{2-\alpha}{\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{2-\alpha}{\alpha}}\\
+b_{i} & \leq & p_{i}^{\frac{2-\alpha+\alpha\sigma}{\alpha}}w^{-\frac{2-2\alpha}{\alpha}}z_{i}^{\frac{2}{\alpha}}\frac{k_{i}}{\chi}\frac{A}{P^{\sigma}Y}\left(\frac{2-\alpha}{2}\right)^{\frac{2-\alpha}{\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{2-\alpha}{\alpha}}
+\end{eqnarray*}
+
+\end_inset
+
+and let the 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ for which equality holds be defined as 
+\begin_inset Formula $\bar{b}_{\mbox{case1}}$
+\end_inset
+
+.
+ Then, again from min_cost, realized revenues are 
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi\left(b_{i},z_{i},A,k,p\right) & = & \begin{cases}
+py_{i}^{d}-C_{u}\left(y_{i}^{d}\right) & \mbox{if }b_{i}\leq\bar{b}_{\mbox{case1}}\\
+py_{i}^{s}-C_{u}\left(y_{i}^{s}\right) & \mbox{if }b_{i}>\bar{b}_{\mbox{case1}}
+\end{cases}\\
+ & = & \begin{cases}
+b_{i}P^{\sigma}\frac{Y}{A}p_{i}^{1-\sigma}-b_{i}^{\frac{2}{2-\alpha}}w^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma}Yp_{i}^{-\sigma}}{Az_{i}}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k_{i}}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right] & \mbox{if }b_{i}\leq\bar{b}_{\mbox{case1}}\\
+\left(p_{i}z_{i}\right)^{\frac{2}{\alpha}}w^{-\frac{2-2\alpha}{\alpha}}\frac{k_{i}}{\chi}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{2-\alpha}{\alpha}}\left(\frac{2-\alpha}{2}\right)^{\frac{2}{\alpha}}\frac{\alpha}{2-\alpha} & \mbox{if }b_{i}>\bar{b}_{\mbox{case1}}.
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+In the latter case 
+\begin_inset Formula $y_{i}^{d}\leq y_{i}^{s}$
+\end_inset
+
+ implies 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{eqnarray*}
+b_{i}P^{\sigma}\frac{Y}{A}p^{-\sigma} & \leq & \left[\frac{p_{i}}{w}\left(1-\alpha\right)\right]^{\frac{1-\alpha}{\alpha}}z_{i}^{\frac{1}{\alpha}}k_{i}\\
+b_{i} & \leq & \frac{A}{P^{\sigma}Y}p_{i}^{\frac{1-\alpha+\sigma\alpha}{\alpha}}\left[\frac{1-\alpha}{w}\right]^{\frac{1-\alpha}{\alpha}}z_{i}^{\frac{1}{\alpha}}k_{i}
+\end{eqnarray*}
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+and the corresponding 
+\begin_inset Formula $\bar{b}_{\mbox{case2}}$
+\end_inset
+
+.
+ A threshold 
+\begin_inset Formula $\hat{\bar{b}}$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+b_{i}P^{\sigma}\frac{Y}{A}p_{i}^{-\sigma} & \leq & z_{i}k\left(\frac{1}{2\chi}\frac{\alpha}{1-\alpha}w\right)^{-\left(1-\alpha\right)}\\
+b_{i} & \leq & \frac{1}{P^{\sigma}Y}p_{i}^{\sigma}Az_{i}k_{i}\left(2\chi\frac{1-\alpha}{\alpha}\frac{1}{w}\right)^{1-\alpha}
+\end{eqnarray*}
+
+\end_inset
+
+ Realized revenues are
+\begin_inset Formula 
+\begin{eqnarray*}
+\pi\left(b_{i},z_{i},A,k,p\right) & = & \begin{cases}
+py^{d}-C_{u}\left(y^{d}\right) & \mbox{if }b_{i}\leq\hat{\bar{b}}\\
+py^{d}-C_{c}\left(y^{d}\right) & \mbox{if }\hat{\bar{b}}<b_{i}\leq\bar{b}_{\mbox{case2}}\\
+py^{s}-C_{c}\left(y^{s}\right) & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
+\end{cases}\\
+ & = & \begin{cases}
+b_{i}P^{\sigma}\frac{Y}{A}p_{i}^{1-\sigma}-b_{i}^{\frac{2}{2-\alpha}}w^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma}Yp_{i}^{-\sigma}}{Az_{i}}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k_{i}}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right] & \mbox{if }b_{i}\leq\hat{\bar{b}}\\
+b_{i}P^{\sigma}\frac{Y}{A}p_{i}^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(\frac{P^{\sigma}Y}{Az_{i}p_{i}^{\sigma}}\right)^{\frac{1}{1-\alpha}}k_{i}^{-\frac{\alpha}{1-\alpha}}-\chi k_{i} & \mbox{if }\hat{\bar{b}}<b_{i}\leq\bar{b}_{\mbox{case2}}\\
+\left(p_{i}z_{i}\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k_{i}\left(1-\alpha\right)_{i}^{\frac{1-\alpha}{\alpha}}\alpha-\chi k_{i} & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}.
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Restricting sources of shocks
+\end_layout
+
+\begin_layout Standard
+Because it is easier to write down expected profits in terms of only one
+ idiosyncratic random variable, we set 
+\begin_inset Formula $z_{i}=1$
+\end_inset
+
+ and have only 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ as idiosyncratic random variable.
+ Note also that in terms of aggregate random variables we restricted attention
+ to fluctuations in 
+\begin_inset Formula $A$
+\end_inset
+
+, the technology of the final goods (so all aggregate quantities and prices
+ are functions of 
+\begin_inset Formula $A$
+\end_inset
+
+), but could incorporate fluctuations in household preferences (which would
+ then show up as uncertainty in 
+\begin_inset Formula $Y$
+\end_inset
+
+ in the intermediate goods firm's problem.
+\end_layout
+
+\begin_layout Paragraph*
+Expected profits
+\end_layout
+
+\begin_layout Standard
+We can now write down expected profits as integrals with respect to the
+ distributions over 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathbf{1}_{\mbox{cap}}\left(w\left(A\right),p\right)$
+\end_inset
+
+ be an indicator that takes the value of 
+\begin_inset Formula $0$
+\end_inset
+
+ if 
+\begin_inset Formula $pz\leq\frac{w\left(A\right)^{1-\alpha}\left(2\chi\right)^{\alpha}}{\alpha^{\alpha}\left(1-\alpha\right)^{1-\alpha}}$
+\end_inset
+
+ and 
+\begin_inset Formula $1$
+\end_inset
+
+ otherwise (ie it's 
+\begin_inset Formula $1$
+\end_inset
+
+ if the firm wants to supply goods using all its capital in production).
+ Then 
+\begin_inset Formula 
+\begin{multline*}
+E\left[\pi\left(b_{i},A,k,p\right)\right]=\int_{A}\left[1-\mathbf{1}_{\mbox{cap}}\left(w\left(A\right),p\right)\right]\times\\
+\left[\begin{array}{cc}
+\int_{0}^{\bar{b}_{\mbox{case1}}\left(A\right)}b_{i}P^{\sigma}\frac{Y}{A}p_{i}^{1-\sigma}-b_{i}^{\frac{2}{2-\alpha}}w\left(A\right)^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma}Yp_{i}^{-\sigma}}{Az_{i}}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k_{i}}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]df\left(b\right) & +\\
+\int_{\bar{b}_{\mbox{case1}}\left(A\right)}^{\infty}\left(p_{i}z_{i}\right)^{\frac{2}{\alpha}}w\left(A\right)^{-\frac{2-2\alpha}{\alpha}}\frac{k_{i}}{\chi}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{2-\alpha}{\alpha}}\left(\frac{2-\alpha}{2}\right)^{\frac{2}{\alpha}}\frac{\alpha}{2-\alpha}df\left(b\right)
+\end{array}\right]+\\
+\mathbf{1}_{\mbox{cap}}\left(w\left(A\right),p\right)\times\\
+\left[\begin{array}{cc}
+\int_{0}^{\hat{\bar{b}}\left(A\right)}b_{i}P^{\sigma}\frac{Y}{A}p_{i}^{1-\sigma}-b_{i}^{\frac{2}{2-\alpha}}w\left(A\right)^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma}Yp_{i}^{-\sigma}}{Az_{i}}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k_{i}}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]df\left(b\right) & +\\
+\int_{\hat{\bar{b}}\left(A\right)}^{\bar{b}_{\mbox{case2}}\left(A\right)}b_{i}P^{\sigma}\frac{Y}{A}p_{i}^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(A\right)\left(\frac{P^{\sigma}Y}{Az_{i}p_{i}^{\sigma}}\right)^{\frac{1}{1-\alpha}}k_{i}^{-\frac{\alpha}{1-\alpha}}-\chi k_{i}df\left(b\right) & +\\
+\int_{\bar{b}_{\mbox{case2}}\left(A\right)}^{\infty}\left(p_{i}z_{i}\right)^{\frac{1}{\alpha}}w\left(A\right)^{-\frac{1-\alpha}{\alpha}}k_{i}\left(1-\alpha\right)_{i}^{\frac{1-\alpha}{\alpha}}\alpha-\chi k_{i}df\left(b\right)
+\end{array}\right]df_{A}\left(A\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

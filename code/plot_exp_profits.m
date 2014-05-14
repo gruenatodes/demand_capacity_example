@@ -1,3 +1,5 @@
+% Debugging script. Run after parameters have been set. Change ranges for k
+% and pr as needed.
 Nk = 100;
 Npr = 120;
 k_plot = linspace(0.01, 1, Nk);

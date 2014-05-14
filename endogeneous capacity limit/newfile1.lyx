@@ -1,0 +1,125 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+E\left[\pi\left(b_{i},A,k,p\right)\right]=\int_{A}\left[1-\mathbf{1}_{\mbox{cap}}\left(w\left(A\right),p\right)\right]\times\\
+\left[\begin{array}{cc}
+\int_{0}^{\bar{b}_{\mbox{case1}}\left(A\right)}b_{i}P^{\sigma}\frac{Y}{A}p_{i}^{1-\sigma}-b_{i}^{\frac{2}{2-\alpha}}w\left(A\right)^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma}Yp_{i}^{-\sigma}}{Az_{i}}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k_{i}}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]df\left(b\right) & +\\
+\int_{\bar{b}_{\mbox{case1}}\left(A\right)}^{\infty}\left(p_{i}z_{i}\right)^{\frac{2}{\alpha}}w\left(A\right)^{-\frac{2-2\alpha}{\alpha}}\frac{k_{i}}{\chi}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{2-\alpha}{\alpha}}\left(\frac{2-\alpha}{2}\right)^{\frac{2}{\alpha}}\frac{\alpha}{2-\alpha}df\left(b\right)
+\end{array}\right]+\\
+\mathbf{1}_{\mbox{cap}}\left(w\left(A\right),p\right)\times\\
+\left[\begin{array}{cc}
+\int_{0}^{\hat{\bar{b}}\left(A\right)}b_{i}P^{\sigma}\frac{Y}{A}p_{i}^{1-\sigma}-b_{i}^{\frac{2}{2-\alpha}}w\left(A\right)^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma}Yp_{i}^{-\sigma}}{Az_{i}}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k_{i}}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]df\left(b\right) & +\\
+\int_{\hat{\bar{b}}\left(A\right)}^{\bar{b}_{\mbox{case2}}\left(A\right)}b_{i}P^{\sigma}\frac{Y}{A}p_{i}^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(A\right)\left(\frac{P^{\sigma}Y}{Az_{i}p_{i}^{\sigma}}\right)^{\frac{1}{1-\alpha}}k_{i}^{-\frac{\alpha}{1-\alpha}}-\chi k_{i}df\left(b\right) & +\\
+\int_{\bar{b}_{\mbox{case2}}\left(A\right)}^{\infty}\left(p_{i}z_{i}\right)^{\frac{1}{\alpha}}w\left(A\right)^{-\frac{1-\alpha}{\alpha}}k_{i}\left(1-\alpha\right)_{i}^{\frac{1-\alpha}{\alpha}}\alpha-\chi k_{i}df\left(b\right)
+\end{array}\right]df_{A}\left(A\right)
+\end{multline*}
+
+\end_inset
+
+Write the first square bracket as: 
+\begin_inset Formula 
+\begin{multline*}
+\int_{0}^{\bar{b}_{\mbox{case1}}\left(A\right)}b_{i}p_{i}^{1-\sigma}C_{1}\left(A\right)-b_{i}^{\frac{2}{2-\alpha}}p_{i}^{-\frac{2\sigma}{2-\alpha}}k^{-\frac{\alpha}{2-\alpha}}C_{2}\left(A\right)df\left(b\right)+\int_{\bar{b}_{\mbox{case1}}\left(A\right)}^{\infty}p_{i}^{\frac{2}{\alpha}}k_{i}C_{3}\left(A\right)df\left(b\right)
+\end{multline*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{b}_{\mbox{case1}}\left(A\right)=p_{i}^{\frac{2-\alpha+\alpha\sigma}{\alpha}}k_{i}C_{4}\left(A\right)$
+\end_inset
+
+.
+ Differentiate wrt 
+\begin_inset Formula $p$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{multline*}
+\int_{0}^{\bar{b}_{\mbox{case1}}\left(A\right)}-\left(\sigma-1\right)b_{i}p_{i}^{-\sigma}C_{1}\left(A\right)+\frac{2\sigma}{2-\alpha}b_{i}^{\frac{2}{2-\alpha}}p_{i}^{-\frac{2\sigma}{2-\alpha}-1}k^{-\frac{\alpha}{2-\alpha}}C_{2}\left(A\right)df\left(b\right)+\\
+\left[\bar{b}_{\mbox{case1}}\left(A\right)p_{i}^{1-\sigma}C_{1}\left(A\right)-\left[\bar{b}_{\mbox{case1}}\left(A\right)\right]^{\frac{2}{2-\alpha}}p_{i}^{-\frac{2\sigma}{2-\alpha}}k^{-\frac{\alpha}{2-\alpha}}C_{2}\left(A\right)\right]f\left(\bar{b}_{\mbox{case1}}\left(A\right)\right)\frac{2-\alpha+\alpha\sigma}{\alpha}p^{\frac{2-\alpha+\alpha\sigma}{\alpha}-1}kC_{4}\left(A\right)+\\
+\int_{\bar{b}_{\mbox{case1}}\left(A\right)}^{\infty}\frac{2}{\alpha}p_{i}^{\frac{2-\alpha}{\alpha}}k_{i}C_{3}\left(A\right)df\left(b\right)-p_{i}^{\frac{2}{\alpha}}k_{i}C_{3}\left(A\right)f\left(\bar{b}_{\mbox{case1}}\left(A\right)\right)\frac{2-\alpha+\alpha\sigma}{\alpha}p^{\frac{2-\alpha+\alpha\sigma}{\alpha}-1}kC_{4}\left(A\right)
+\end{multline*}
+
+\end_inset
+
+Differentiate with respect to 
+\begin_inset Formula $k$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{multline*}
+\int_{0}^{\bar{b}_{\mbox{case1}}\left(A\right)}\frac{\alpha}{2-\alpha}b_{i}^{\frac{2}{2-\alpha}}p_{i}^{-\frac{2\sigma}{2-\alpha}}k^{-\frac{2}{2-\alpha}}C_{2}\left(A\right)df\left(b\right)+\\
+\left[\bar{b}_{\mbox{case1}}\left(A\right)p_{i}^{1-\sigma}C_{1}\left(A\right)-\left[\bar{b}_{\mbox{case1}}\left(A\right)\right]^{\frac{2}{2-\alpha}}p_{i}^{-\frac{2\sigma}{2-\alpha}}k^{-\frac{\alpha}{2-\alpha}}C_{2}\left(A\right)\right]f\left(\bar{b}_{\mbox{case1}}\left(A\right)\right)p_{i}^{\frac{2-\alpha+\alpha\sigma}{\alpha}}C_{4}\left(A\right)+\\
+\int_{\bar{b}_{\mbox{case1}}\left(A\right)}^{\infty}p_{i}^{\frac{2}{\alpha}}C_{3}\left(A\right)df\left(b\right)-p_{i}^{\frac{2}{\alpha}}k_{i}C_{3}\left(A\right)f\left(\bar{b}_{\mbox{case1}}\left(A\right)\right)p_{i}^{\frac{2-\alpha+\alpha\sigma}{\alpha}}C_{4}\left(A\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

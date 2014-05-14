@@ -558,13 +558,13 @@ py^{s}-C_{c}\left(y^{s}\right) & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
 \end{cases}\\
  & = & \begin{cases}
 b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{2}{2-\alpha}}w^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma-1}Ip^{-\sigma}}{z}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right] & \mbox{if }b_{i}\leq\hat{\bar{b}}\\
-b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{1}{1-\alpha}}k^{-\frac{\alpha}{1-\alpha}}-\chi & \mbox{if }\hat{\bar{b}}<b_{i}\leq\bar{b}_{\mbox{case2}}\\
-\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}-\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1}{\alpha}}-\chi & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
+b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{1}{1-\alpha}}k^{-\frac{\alpha}{1-\alpha}}-\chi k & \mbox{if }\hat{\bar{b}}<b_{i}\leq\bar{b}_{\mbox{case2}}\\
+\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}-\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1}{\alpha}}-\chi k & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
 \end{cases}\\
  & = & \begin{cases}
 b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{2}{2-\alpha}}w^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma-1}Ip^{-\sigma}}{z}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right] & \mbox{if }b_{i}\leq\hat{\bar{b}}\\
-b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{1}{1-\alpha}}k^{-\frac{\alpha}{1-\alpha}}-\chi & \mbox{if }\hat{\bar{b}}<b_{i}\leq\bar{b}_{\mbox{case2}}\\
-\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}\alpha-\chi & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
+b_{i}P^{\sigma-1}Ip^{1-\sigma}-b_{i}^{\frac{1}{1-\alpha}}w\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{1}{1-\alpha}}k^{-\frac{\alpha}{1-\alpha}}-\chi k & \mbox{if }\hat{\bar{b}}<b_{i}\leq\bar{b}_{\mbox{case2}}\\
+\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}\alpha-\chi k & \mbox{if }\bar{b}_{\mbox{case2}}<b_{i}
 \end{cases}
 \end{eqnarray*}
 
@@ -582,7 +582,7 @@ We're finally ready to write down expected profits as a function of
 \begin_inset Formula $\left(k,p\right)$
 \end_inset
 
- as an integral against the distribution of 
+ as an integral over the distribution of 
 \begin_inset Formula $b_{i}$
 \end_inset
 
@@ -618,7 +618,7 @@ We're finally ready to write down expected profits as a function of
 \begin_inset Formula $\tilde{k}=k$
 \end_inset
 
-.
+ at quantity supplied.
  In the former case 1 expected profits are
 \begin_inset Formula 
 \begin{multline*}
@@ -635,7 +635,7 @@ and in the latter case 2 they are
 E\left[\pi\right]=P^{\sigma-1}Ip^{1-\sigma}\int_{0}^{\hat{\bar{b}}}b_{i}df\left(b_{i}\right)\\
 -w^{\frac{2-2\alpha}{2-\alpha}}\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{2}{2-\alpha}}\left(\frac{\chi}{k}\right)^{\frac{\alpha}{2-\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]\int_{0}^{\hat{\bar{b}}}b_{i}^{\frac{2}{2-\alpha}}df\left(b_{i}\right)\\
 +P^{\sigma-1}Ip^{1-\sigma}\int_{\hat{\bar{b}}}^{\bar{b}_{\textrm{case2}}}b_{i}df\left(b_{i}\right)-w\left(\frac{P^{\sigma-1}I}{zp^{\sigma}}\right)^{\frac{1}{1-\alpha}}k^{-\frac{\alpha}{1-\alpha}}\int_{\hat{\bar{b}}}^{\bar{b}_{\textrm{case2}}}b_{i}^{\frac{1}{1-\alpha}}df\left(b_{i}\right)\\
-+\left[1-F\left(\bar{b}_{\textrm{case2}}\right)\right]\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}\alpha-\left[1-F\left(\hat{\bar{b}}\right)\right]\chi.
++\left[1-F\left(\bar{b}_{\textrm{case2}}\right)\right]\left(pz\right)^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}k\left(1-\alpha\right)^{\frac{1-\alpha}{\alpha}}\alpha-\left[1-F\left(\hat{\bar{b}}\right)\right]\chi k.
 \end{multline*}
 
 \end_inset
@@ -840,6 +840,96 @@ reference "eq:ys_lt_yhat"
 \int_{0}^{\infty}b_{i}^{\frac{1}{\sigma}}y\left(b_{i}\right)^{\frac{\sigma-1}{\sigma}}\mbox{d}f_{b|\mu}\left(b_{i}|\mu\right)=\left(P^{\sigma-1}Yp^{-\sigma}\right)^{\frac{\sigma-1}{\sigma}}\int_{0}^{\bar{b}_{\mbox{case2}}}b_{i}df_{b|\mu}\left(b_{i}|\mu\right)\\
 \left(\left[\frac{p}{w}\left(1-\alpha\right)\right]^{\frac{1-\alpha}{\alpha}}z^{\frac{1}{\alpha}}k\right)^{\frac{\sigma-1}{\sigma}}\int_{\bar{b}_{\mbox{case2}}}^{\infty}b_{i}^{\frac{1}{\sigma}}df_{b|\mu}\left(b_{i}|\mu\right)
 \end{multline*}
+
+\end_inset
+
+if (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ys_gt_yhat"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsubsection*
+Aggregate utilization costs
+\end_layout
+
+\begin_layout Standard
+Utilized capital is given by 
+\begin_inset Formula $\tilde{k}=\left(\frac{y}{z}\right)^{\frac{1}{2-\alpha}}\left(\frac{1}{2\chi}\frac{\alpha}{1-\alpha}wk\right)^{\frac{1-\alpha}{2-\alpha}}$
+\end_inset
+
+.
+ Utilization costs are given by 
+\begin_inset Formula $c\left(\tilde{k}/k\right)k=\chi\tilde{k}^{2}/k$
+\end_inset
+
+.
+ Output 
+\begin_inset Formula $y$
+\end_inset
+
+ (in the 
+\begin_inset Formula $y^{s}<\hat{y}$
+\end_inset
+
+ case) is given as 
+\begin_inset Formula 
+\[
+y=\begin{cases}
+b_{i}P^{\sigma-1}Ip^{-\sigma} & \textrm{if }b\leq\bar{b}_{\textrm{case1}}\\
+p^{\frac{2-\alpha}{\alpha}}w^{-\frac{2-2\alpha}{\alpha}}z^{\frac{2}{\alpha}}\frac{k}{\chi}\left(\frac{2-\alpha}{2}\right)^{\frac{2-\alpha}{\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{2-\alpha}{\alpha}} & \textrm{if }b>\bar{b}_{\textrm{case1}}
+\end{cases}
+\]
+
+\end_inset
+
+Utilized capital is then
+\begin_inset Formula 
+\begin{eqnarray*}
+\tilde{k} & = & \begin{cases}
+\left(\frac{b_{i}P^{\sigma-1}Ip^{-\sigma}}{z}\right)^{\frac{1}{2-\alpha}}\left(\frac{1}{2\chi}\frac{\alpha}{1-\alpha}wk\right)^{\frac{1-\alpha}{2-\alpha}} & \textrm{if }b\leq\bar{b}_{\textrm{case1}}\\
+\left\{ p^{\frac{2-\alpha}{\alpha}}w^{-\frac{2-2\alpha}{\alpha}}z^{\frac{2}{\alpha}}\frac{k}{\chi}\left(\frac{2-\alpha}{2}\right)^{\frac{2-\alpha}{\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{2-\alpha}{\alpha}}\right\} ^{\frac{1}{2-\alpha}}\left(\frac{1}{z}\right)^{\frac{1}{2-\alpha}}\left(\frac{1}{2\chi}\frac{\alpha}{1-\alpha}wk\right)^{\frac{1-\alpha}{2-\alpha}} & \textrm{if }b>\bar{b}_{\textrm{case1}}
+\end{cases}\\
+ & = & \begin{cases}
+\left[\frac{b_{i}P^{\sigma-1}Ip^{-\sigma}}{z}\left(\frac{1}{2\chi}\frac{\alpha}{1-\alpha}wk\right)^{1-\alpha}\right]^{\frac{1}{2-\alpha}} & \textrm{if }b\leq\bar{b}_{\textrm{case1}}\\
+p^{\frac{1}{\alpha}}w^{-\frac{2-2\alpha}{\alpha\left(2-\alpha\right)}}z^{\frac{2}{\alpha\left(2-\alpha\right)}}\left(\frac{k}{\chi}\right)^{\frac{1}{2-\alpha}}\left(\frac{2-\alpha}{2}\right)^{\frac{1}{\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{1}{\alpha}}\left(\frac{1}{z}\right)^{\frac{1}{2-\alpha}}\left(\frac{1}{2\chi}\frac{\alpha}{1-\alpha}wk\right)^{\frac{1-\alpha}{2-\alpha}} & \textrm{if }b>\bar{b}_{\textrm{case1}}
+\end{cases}\\
+ & = & \begin{cases}
+\left[\frac{b_{i}P^{\sigma-1}Ip^{-\sigma}}{z}\left(\frac{1}{2\chi}\frac{\alpha}{1-\alpha}wk\right)^{1-\alpha}\right]^{\frac{1}{2-\alpha}} & \textrm{if }b\leq\bar{b}_{\textrm{case1}}\\
+p^{\frac{1}{\alpha}}w^{-\frac{1-\alpha}{\alpha}}z^{\frac{1}{\alpha}}\frac{k}{\chi}\left(\frac{2-\alpha}{2}\right)^{\frac{1}{\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{1}{\alpha}}\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{1-\alpha}{2-\alpha}} & \textrm{if }b>\bar{b}_{\textrm{case1}}
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+such that costs are
+\begin_inset Formula 
+\begin{eqnarray*}
+\chi\tilde{k}^{2}/k & = & \begin{cases}
+\left[\frac{b_{i}P^{\sigma-1}Ip^{-\sigma}}{z}\left(\frac{1}{2\chi}\frac{\alpha}{1-\alpha}wk\right)^{1-\alpha}\right]^{\frac{2}{2-\alpha}}\frac{\chi}{k} & \textrm{if }b\leq\bar{b}_{\textrm{case1}}\\
+p^{\frac{2}{\alpha}}w^{-\frac{2-2\alpha}{\alpha}}z^{\frac{2}{\alpha}}\left(\frac{k}{\chi}\right)^{2}\left(\frac{2-\alpha}{2}\right)^{\frac{2}{\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{2}{\alpha}}\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2-2\alpha}{2-\alpha}}\frac{\chi}{k} & \textrm{if }b>\bar{b}_{\textrm{case1}}
+\end{cases}\\
+ & = & \begin{cases}
+\left[\frac{b_{i}P^{\sigma-1}Ip^{-\sigma}}{z}\left(\frac{\alpha}{2-2\alpha}w\right)^{1-\alpha}\right]^{\frac{2}{2-\alpha}}\left(\frac{k}{\chi}\right)^{-\frac{\alpha}{2-\alpha}} & \textrm{if }b\leq\bar{b}_{\textrm{case1}}\\
+p^{\frac{2}{\alpha}}w^{-\frac{2-2\alpha}{\alpha}}z^{\frac{2}{\alpha}}\frac{k}{\chi}\left(\frac{2-\alpha}{2}\right)^{\frac{2}{\alpha}}\left[\left(\frac{2-2\alpha}{\alpha}\right)^{\frac{\alpha}{2-\alpha}}+\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\left(1-\alpha\right)}{2-\alpha}}\right]^{-\frac{2}{\alpha}}\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2-2\alpha}{2-\alpha}} & \textrm{if }b>\bar{b}_{\textrm{case1}}
+\end{cases}\\
+ & = & \begin{cases}
+\left[\frac{b_{i}P^{\sigma-1}Ip^{-\sigma}}{z}\left(\frac{\alpha}{2-2\alpha}w\right)^{1-\alpha}\right]^{\frac{2}{2-\alpha}}\left(\frac{k}{\chi}\right)^{-\frac{\alpha}{2-\alpha}} & \textrm{if }b\leq\bar{b}_{\textrm{case1}}\\
+p^{\frac{2}{\alpha}}w^{-\frac{2-2\alpha}{\alpha}}z^{\frac{2}{\alpha}}\frac{k}{\chi}\left(\frac{2-\alpha}{2}\right)^{\frac{2}{\alpha}}\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\alpha}{\alpha\left(2-\alpha\right)}}\left[1+\left(\frac{\alpha}{2-2\alpha}\right)\right]^{-\frac{2}{\alpha}}\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2-2\alpha}{2-\alpha}} & \textrm{if }b>\bar{b}_{\textrm{case1}}
+\end{cases}\\
+ & = & \begin{cases}
+\left[\frac{b_{i}P^{\sigma-1}Ip^{-\sigma}}{z}\left(\frac{\alpha}{2-2\alpha}w\right)^{1-\alpha}\right]^{\frac{2}{2-\alpha}}\left(\frac{k}{\chi}\right)^{-\frac{\alpha}{2-\alpha}} & \textrm{if }b\leq\bar{b}_{\textrm{case1}}\\
+p^{\frac{2}{\alpha}}w^{-\frac{2-2\alpha}{\alpha}}z^{\frac{2}{\alpha}}\frac{k}{\chi}\left(\frac{2-\alpha}{2}\right)^{\frac{2}{\alpha}}\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2\alpha}{\alpha\left(2-\alpha\right)}}\left[\frac{2-\alpha}{2-2\alpha}\right]^{-\frac{2}{\alpha}}\left(\frac{\alpha}{2-2\alpha}\right)^{\frac{2-2\alpha}{2-\alpha}} & \textrm{if }b>\bar{b}_{\textrm{case1}}
+\end{cases}\\
+ & = & \begin{cases}
+\left[\frac{b_{i}P^{\sigma-1}Ip^{-\sigma}}{z}\left(\frac{\alpha}{2-2\alpha}w\right)^{1-\alpha}\right]^{\frac{2}{2-\alpha}}\left(\frac{k}{\chi}\right)^{-\frac{\alpha}{2-\alpha}} & \textrm{if }b\leq\bar{b}_{\textrm{case1}}\\
+p^{\frac{2}{\alpha}}w^{-\frac{2-2\alpha}{\alpha}}z^{\frac{2}{\alpha}}\frac{k}{\chi}\left(1-\alpha\right)^{\frac{2\left(1-\alpha\right)}{\alpha}}\left(\frac{\alpha}{2}\right)^{2} & \textrm{if }b>\bar{b}_{\textrm{case1}}
+\end{cases}
+\end{eqnarray*}
 
 \end_inset
 
